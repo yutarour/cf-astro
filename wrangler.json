@@ -7,7 +7,6 @@
     "directory": "./dist",
     "binding": "ASSETS"
   },
-  "pages_build_output_dir":"./dir",
   "observability": {
     "enabled": true
   },

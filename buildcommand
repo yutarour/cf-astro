@@ -1,0 +1,1 @@
+npx astro build && touch ./dist/.assetsignore && npx wrangler deploy
