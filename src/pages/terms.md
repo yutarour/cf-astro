@@ -3,9 +3,9 @@ title: 'Terms and Conditions'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: January 06, 2023
+_Last updated_: May 01, 2025
 
-Please read these terms and conditions carefully before using Our Service.
+These terms of service came with the template I cloned. It looked good, so I'm keeping it here. I do not offer a significant enough service that I need a TOS and privacy policy...
 
 ## Interpretation and Definitions
 
@@ -17,23 +17,7 @@ The words of which the initial letter is capitalized have meanings defined under
 
 For the purposes of these Terms and Conditions:
 
-- **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
-
-- **Country** refers to: California, United States
-
-- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to AstroWind LLC, 1 Cupertino, CA 95014.
-
-- **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
-
-- **Service** refers to the Website.
-
-- **Terms and Conditions** (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement is a Demo.
-
-- **Third-party Social Media Service** means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
-
-- **Website** refers to AstroWind, accessible from [https://astrowind.vercel.app](https://astrowind.vercel.app)
-
-- **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
+- We: Refers to "I" meaning the owner of the website.
 
 ## Acknowledgment
 
