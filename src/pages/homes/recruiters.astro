@@ -12,7 +12,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: 'Personal Homepage Demo',
+  title: 'For Recruiters',
 };
 ---
 
@@ -26,7 +26,7 @@ const metadata = {
         { text: 'Resume', href: '#resume' },
         { text: 'Porfolio', href: '#porfolio' },
         { text: 'Blog', href: '#blog' },
-        { text: 'Github', href: 'https://github.com/onwidget' },
+        { text: 'Github', href: 'https://github.com/yutarour' },
       ]}
       actions={[
         {
@@ -43,14 +43,12 @@ const metadata = {
 
   <Hero
     id="hero"
-    title="Sarah Johnson"
-    tagline="Personal Web Demo"
-    actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
+    title="Yutaro U."
+    tagline="Passionate About Making 'Stuff'"
+    actions={[{ variant: 'primary', text: 'Hire me', href: "mailto:yutaro@yutaro.dev" }]}
   >
     <Fragment slot="subtitle">
-      I'm a Graphic Designer passionate about crafting visual stories. <br /> With 5 years of experience and a degree from
-      New York University's School of Design. I infuse vitality into brands and designs, transforming concepts into captivating
-      realities.
+      
     </Fragment>
   </Hero>
 
@@ -58,52 +56,14 @@ const metadata = {
 
   <Content
     id="about"
-    columns={3}
-    items={[
-      {
-        icon: 'tabler:brand-dribbble',
-        callToAction: {
-          target: '_blank',
-          text: 'Dribbble',
-          href: '#',
-        },
-      },
-      {
-        icon: 'tabler:brand-behance',
-        callToAction: {
-          target: '_blank',
-          text: 'Behance',
-          href: '#',
-        },
-      },
-      {
-        icon: 'tabler:brand-pinterest',
-        callToAction: {
-          target: '_blank',
-          text: 'Pinterest',
-          href: '#',
-        },
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Colorful Image',
-      loading: 'eager',
-    }}
   >
     <Fragment slot="content">
       <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
-      <p>
-        Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
-        pixel becomes a brushstroke in the canvas of imagination.
-      </p>
-      <br />
-      <p>
-        I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
-        details of typography, or the vibrant hues of nature during my outdoor escapades.
-      </p>
-      <br />
-      <p>If you're curious to dive deeper into my work, you can follow me:</p>
+      I'm a developer and maker, and I'm quite passionate about creating things with a particular interest in
+      linking biometric data (heart rate, brain waves, etc.) to something useful. Additionally, I love working with 
+      sensors that measure environmental variables (pressure, temperature, humidity, air quality, etc.) <br>
+      I have experience in writing C++, Python, and Java. I hope you find this page useful in making a decision.<br>
+      I also have experience in manufacturing and assembly techniques such as soldering, 3D printing (FDM, SLA), etc.
     </Fragment>
 
     <Fragment slot="bg">
@@ -118,15 +78,20 @@ const metadata = {
     title="Work experience"
     items={[
       {
-        title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
-        icon: 'tabler:briefcase',
+        title: 'Avionics Lead <br /> <span class="font-normal">UAV Forge @ UCI</span> <br /> <span class="text-sm font-normal">June 2025 - Present</span>',
+        description: `Manged a team of 5 people, delegating tasks such as PCB design, and working on PCB design and embeddes system programming myself. <br/>Because being able to do something is what makes engineering fun.`,
+        icon: 'tabler:IconDrone',
       },
       {
         title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
+          'Avionics Subteam Member <br /> <span class="font-normal">UAV Forge @ UCI</span> <br /> <span class="text-sm font-normal">September 2024 - June 2025</span>',
+        description: `Create custom PCBs<br>Assembling Avionics components such as ESCs, flight computers, power distribution boards, etc.<br>Embedded programming for the low power PCBs, Payload modules`,
+        icon: 'tabler:IconDrone',
+      },
+      {
+        title:
+          'Lifeguard <br /> <span class="font-normal">Wave Aquatics, Redmond WA</span> <br /> <span class="text-sm font-normal">2020-2024</span>',
+        description: `Worked at a pool, custodial tasks, cleaning, pool chemical measurements, etc.`,
         icon: 'tabler:briefcase',
       },
     ]}
@@ -140,11 +105,7 @@ const metadata = {
     title="Education"
     items={[
       {
-        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
-        icon: 'tabler:school',
-      },
-      {
-        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
+        title: `Bachelor of Science in Computer Science and Engineering <br /> <span class="font-normal">University of California, Irvine's Henry Samueli School of Engineering</span> <br /> <span class="text-sm font-normal">2024-present</span>`,
         icon: 'tabler:school',
       },
     ]}
@@ -155,45 +116,29 @@ const metadata = {
 
   <Features3
     title="Skills"
-    subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
+    subtitle="Skills I have learned over the years to help me create better things"
     columns={3}
     defaultIcon="tabler:point-filled"
     items={[
       {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
+        title: 'Soldering',
+        description: 'Great at Soldering. (currently use the Pinecil, and love it) Can solder SMD 0603, QFP packages, have done SMD assembly using stencils and by hand',
       },
       {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
+        title: 'Graphic Design/Adobe Creative Suite',
+        description: 'I have experience in designing infographics, logos, etc. In Adobe Illustrator',
       },
       {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
+        title: 'PCB Design',
+        description: 'Experience in creating custom PCB solutions using softwares such as KiCad. Knowledge in common PCB design practices.',
       },
       {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
+        title: 'Programming Languages',
+        description: 'Experience writing C++, Python, Java',
       },
       {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
-      },
-      {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
-      },
-      {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
-      },
-      {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
-      },
-      {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
+        title: 'Embedded Systems Programming',
+        description: 'Programming in C++, using platformio for ESP32, Teensy, Raspberry Pi, AVR based microcontrollers',
       },
     ]}
   />
