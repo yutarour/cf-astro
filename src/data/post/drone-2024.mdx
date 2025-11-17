@@ -1,0 +1,78 @@
+---
+publishDate: 2025-06-15T00:00:00Z
+title: "Weaver, UCI UAV Forge's 2024 competition vehicle"
+excerpt: See UAV Forge's state of the art competition vehicle for 2024. Lots of custom designed components, that we invested blood, sweat, and tears to make fly.
+image: ~/assets/images/Forge-2024/weaver-flying.jpg
+tags:
+  - projects
+  - engineering
+  - team-projects
+  - pcb-design
+  - drones
+metadata:
+  canonical: https://yutaro.dev/drone-2024
+---
+## About the Project
+  - I joined this project in my Freshman year after applying to it during the summer. No particular reason I applied, but I wanted a project I could work on while I was in school.
+  - The team is about 30 people, but the Avionics subsystem I was on consisted of 3 active members which consisted of me, the lead, and another member. The fourth member rearely showed up.
+## About the Competition
+  - We competed in the SUAS competition, which is a international competition that gives us tasks that we have to complete.
+  - We placed **1st in nation**, **7th in world** with our drone.
+  - [Competiton website](https://suas-competition.org/competitions)
+  - There were a few key categories we could get points in:
+    - Size: The competition awared higher points that could fit in certain dementions such as suit cases, a carry on, backpack, etc.
+    - Batteies: We were awarded higher points if we made our batteries TSA compliant (\<99 Wh>).
+    - Endurance: The more waypoint laps we did, the more points we get.
+    - Payload drops: We had to drop payloads onto certain targets such as bicycles, stop signs, etc.
+    - Mapping: Points were awarded for creating a map of the mapping zone.
+    - Autonomous: This all had to be done autonomously. 
+## About the Drone
+![Weaver in the grass in front of our lab](~/assets/images/Forge-2024/weaver-ect-grass.png)
+- Weaver is a fully custom quadcopter with a custom carbon fiber chassis, a camera, some compute, and centimeter level positioning.
+- As avionics is concerned, Weaver consists of the following:
+  - Low power/Compute systems
+    - Arm LED Lights (WS2812B) RGBW LEDs
+    - Nvidia Jetson Orin
+    - GNSS (Cube Pilot Here 4) based on the Ublox Zed F9P
+    - Flight Controller: HolyBro Pixhawk 6X
+    - Payload system: ESP32 C3 Mini with a servo
+    - Camera (SYI A8 Mini)
+    - RFD900 (telemetry)
+    - Radiomaster EP3 ELRS Rx
+  - High power
+    - PDB PCB
+    - PDB Controller PCB
+    - Motors (465 Kv)
+    - ESC (Tmotor 80A 4 in 1)
+    - 6S 8P battery Pack (99.99 Wh each x8)
+  - Misc Components
+    - A GNSS RTK Surveyor on the ground
+    - A toughbook to receive telemetry
+    - Radiomaster Zorro (with custom voice pack)
+## More About Custom Components
+![Testing PDB For functionality while writing code](~/assets/images/Forge-2024/pdb-testing.jpg)
+- There are three systems that were custom made.
+  - Battery
+  - PDB Controller
+  - Battery Interlink Board
+
+### 1. Battery
+![Testing PDB For functionality while writing code](~/assets/images/Forge-2024/weaver-batteries.jpg)
+- We created 8x custom battery packs, each with a 6S configuration of *Molicell P45B*s.
+- The batteries were spot welded together with nickel strips using the k-weld.
+- Each battery pack is approximately `99.9Wh` (`3.7*4500*6 = 99,9900 mWh`) making them TSA compliant.
+
+### 2. PDB Controller
+![PDB Controller PCB Board](~/assets/images/Forge-2024/weaver-pdb-controller-components.jpg)
+- The PDB Controller is responsible for monitoring the battery level of the batteries, measuring the current consumed by the drone, controlling the arm LEDs, and reporting battery statistics to the jetson for SOC (Sate of charge) estimation; which is used by GNC to perform their waypoint planning.
+- There is a onboard ESP32-S3 for performing all of these measurements.
+- There are switching regulators on the back to switch the voltage from battery voltage \~22.5v to 12v and 5v.
+- A 3 pin JST connects the controller to the battery interlink board's 8 channel ADC for cell voltage measurements.
+
+### 3. Battery Interlink Board
+![Battery Interlink PCB Board](~/assets/images/Forge-2024/weaver-pdb-components.jpg)
+- The Battery Interlinker is responsivle for connecting the 8 battery modules together.
+- PCB handles \> 130A of current
+- The onboard 8 channel ADC reports back cell group voltage using I^2C to the controller board.
+- The board copper planes are via stitcked to handle the high current.
+- The board can be used as a parallel board to charge all 8 cell groups at once.
